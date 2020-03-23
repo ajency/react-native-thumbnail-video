@@ -1,5 +1,5 @@
 export const getVideoId = url => {
-  const result = url.split(/(vi\/|v=|\/v\/|youtu\.be\/|\/embed\/)/);
+  const result = url.split(/^.*((youtu.be\/)|(v\/)|(\/u\/\w\/)|(embed\/)|(watch\?))\??v?=?([^#&?]*).*/);
   const videoIdWithParams = result[2];
 
   if (videoIdWithParams !== undefined) {
